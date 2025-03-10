@@ -8,48 +8,51 @@ export const HeroSection = () => {
           <div className="flex justify-center space-x-8 mb-8">
             <div className="relative h-12 w-32">
               <Image
-                src="/mindchamps-logo.png"
-                alt="MindChamps"
+                src="/images/logos/mindchamps-logo.png"
+                alt="MindChamps Preschool"
                 fill
                 className="object-contain"
                 priority
+                sizes="(max-width: 768px) 100vw, 128px"
               />
             </div>
             <div className="relative h-12 w-32">
               <Image
-                src="/mmi-logo.png"
-                alt="MMI"
+                src="/images/logos/mmi-logo.png"
+                alt="MMI Learning Centre"
                 fill
                 className="object-contain"
                 priority
+                sizes="(max-width: 768px) 100vw, 128px"
               />
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <span className="sr-only">Building Trust Through Educational Excellence</span>
             Building Trust Through
             <span className="block text-pink-600">Educational Excellence</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8">
             Enhancing Parent Confidence in Preschool Selection
           </p>
-          <div className="bg-pink-50 rounded-xl p-4 mb-8 inline-block">
+          <div className="bg-pink-50 rounded-xl p-4 mb-8 inline-block w-full max-w-2xl">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-gray-600">
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
                 <span className="font-medium">Amir Ariff</span>
               </div>
-              <div className="hidden md:block text-pink-300">•</div>
+              <div className="hidden md:block text-pink-300" aria-hidden="true">•</div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <span>Campaign Manager - Lead Generation</span>
               </div>
-              <div className="hidden md:block text-pink-300">•</div>
+              <div className="hidden md:block text-pink-300" aria-hidden="true">•</div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 <span>March 2025</span>

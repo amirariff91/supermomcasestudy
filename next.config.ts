@@ -15,12 +15,8 @@ const nextConfig: NextConfig = {
         hostname: 'localhost',
       },
       {
-        protocol: 'http',
-        hostname: 'd844w4gc8w0ks4kks4o0csk0.5.223.50.174.sslip.io',
-      },
-      {
         protocol: 'https',
-        hostname: 'd844w4gc8w0ks4kks4o0csk0.5.223.50.174.sslip.io',
+        hostname: 'supermom.amrff.com',
       }
     ],
   },
