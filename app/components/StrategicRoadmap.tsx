@@ -125,36 +125,86 @@ const phases: Phase[] = [
 
 export const StrategicRoadmap = () => {
   return (
-    <section id="strategic-roadmap" className="py-16">
+    <section 
+      id="strategic-roadmap" 
+      className="py-16"
+      aria-labelledby="roadmap-title"
+      role="region"
+    >
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">90-Day Strategic Roadmap</h2>
+        <h2 id="roadmap-title" className="text-3xl font-bold text-gray-900 mb-8">90-Day Strategic Roadmap</h2>
 
         <div className="space-y-8">
           {phases.map((phase) => (
-            <div key={phase.number} className="bg-white rounded-xl shadow-sm border border-pink-100 p-8">
+            <div 
+              key={phase.number} 
+              className="bg-white rounded-xl shadow-sm border border-pink-100 p-8"
+              role="region"
+              aria-labelledby={`phase-${phase.number}-title`}
+            >
               <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xl">
+                <div 
+                  className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xl"
+                  aria-hidden="true"
+                >
                   {phase.number}
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-gray-900">{phase.title}</h3>
-                    <span className="px-4 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">
+                    <h3 
+                      id={`phase-${phase.number}-title`}
+                      className="text-xl font-semibold text-gray-900"
+                    >
+                      {phase.title}
+                    </h3>
+                    <span 
+                      className="px-4 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium"
+                      aria-label={`Scheduled for ${phase.duration}`}
+                    >
                       {phase.duration}
                     </span>
                   </div>
-                  <div className="grid gap-6 md:grid-cols-3">
+                  <div 
+                    className="grid gap-6 md:grid-cols-3"
+                    role="list"
+                    aria-label={`Phase ${phase.number} initiatives`}
+                  >
                     {phase.initiatives.map((initiative) => (
                       <div
                         key={initiative.title}
                         className="p-4 bg-gray-50 rounded-lg border border-gray-100"
+                        role="listitem"
                       >
-                        <h4 className="font-medium text-gray-900 mb-2">{initiative.title}</h4>
-                        <p className="text-sm text-gray-600 mb-3">{initiative.description}</p>
-                        <ul className="space-y-2">
+                        <h4 
+                          className="font-medium text-gray-900 mb-2"
+                          id={`initiative-${phase.number}-${initiative.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        >
+                          {initiative.title}
+                        </h4>
+                        <p 
+                          className="text-sm text-gray-600 mb-3"
+                          aria-label={`Description: ${initiative.description}`}
+                        >
+                          {initiative.description}
+                        </p>
+                        <ul 
+                          className="space-y-2"
+                          role="list"
+                          aria-label={`Tasks for ${initiative.title}`}
+                        >
                           {initiative.tasks.map((task, index) => (
-                            <li key={index} className="flex items-start gap-2 text-sm text-gray-600">
-                              <svg className="w-4 h-4 text-green-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <li 
+                              key={index} 
+                              className="flex items-start gap-2 text-sm text-gray-600"
+                              role="listitem"
+                            >
+                              <svg 
+                                className="w-4 h-4 text-green-500 mt-1" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                              >
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                               </svg>
                               <span>{task}</span>

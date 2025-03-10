@@ -1,0 +1,15 @@
+[phases.setup]
+nixPkgs = ['nodejs', 'yarn']
+
+[phases.install]
+cmds = ['yarn install --frozen-lockfile']
+
+[phases.build]
+cmds = ['yarn build']
+
+[start]
+cmd = 'node .next/standalone/server.js'
+
+[variables]
+NODE_ENV = 'production'
+PORT = '3000' 

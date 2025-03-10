@@ -2,9 +2,21 @@ import { HeroSection } from './components/HeroSection'
 import { Navigation } from './components/Navigation'
 import { CurrentCampaign } from './components/CurrentCampaign'
 import { ChannelPerformance } from './components/ChannelPerformance'
-import { StrategicRoadmap } from './components/StrategicRoadmap'
-import { BudgetKPI } from './components/BudgetKPI'
+import dynamic from 'next/dynamic'
 import { MarketAnalysis } from './components/MarketAnalysis'
+import { ComponentType } from 'react'
+
+const BudgetKPI = dynamic(() => import('./components/BudgetKPI').then(mod => mod.BudgetKPI as ComponentType), {
+  loading: () => (
+    <div className="animate-pulse bg-gray-100 h-96 rounded-lg" role="progressbar" aria-label="Loading BudgetKPI component" />
+  )
+});
+
+const StrategicRoadmap = dynamic(() => import('./components/StrategicRoadmap').then(mod => mod.StrategicRoadmap as ComponentType), {
+  loading: () => (
+    <div className="animate-pulse bg-gray-100 h-96 rounded-lg" role="progressbar" aria-label="Loading StrategicRoadmap component" />
+  )
+});
 
 export default function Home() {
   return (
