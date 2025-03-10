@@ -1,17 +1,3 @@
-interface BudgetItem {
-  channel: string;
-  allocation: number;
-  color: string;
-}
-
-interface KPIMetric {
-  category: string;
-  metrics: {
-    name: string;
-    target: string;
-  }[];
-}
-
 const budgetAllocation = [
   {
     category: 'Digital Channels & Referrals',
