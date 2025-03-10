@@ -6,8 +6,24 @@ export const HeroSection = () => {
       <section id="overview" className="pt-20 pb-16 bg-gradient-to-br from-pink-50 via-white to-blue-50">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center space-x-8 mb-8">
-            <img src="/mindchamps-logo.png" alt="MindChamps" className="h-12" />
-            <img src="/mmi-logo.png" alt="MMI" className="h-12" />
+            <div className="relative h-12 w-32">
+              <Image
+                src="/mindchamps-logo.png"
+                alt="MindChamps"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className="relative h-12 w-32">
+              <Image
+                src="/mmi-logo.png"
+                alt="MMI"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Building Trust Through
@@ -52,7 +68,7 @@ export const HeroSection = () => {
                 </div>
                 <div>
                   <span className="font-medium">Educational Focus</span>
-                  <p className="text-sm text-gray-600">"Montessori is basically learning life skills" - Parent Feedback</p>
+                  <p className="text-sm text-gray-600">&ldquo;Montessori is basically learning life skills&rdquo; - Parent Feedback</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
