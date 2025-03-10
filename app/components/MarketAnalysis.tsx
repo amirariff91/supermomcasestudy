@@ -83,10 +83,8 @@ export const MarketAnalysis = () => {
 
           <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-sm p-8 text-white">
             <h3 className="text-xl font-semibold mb-6">Market Opportunity</h3>
-            <p className="mb-6">
-              The convergence of growing market demand, digital transformation in education, and
-              Supermom's unique positioning creates a significant opportunity for success in the
-              preschool marketing space.
+            <p className="text-sm text-gray-600">
+              We&apos;re seeing strong potential in the preschool market with growing demand.
             </p>
             <div className="flex items-center gap-3">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -5,7 +5,10 @@ nixPkgs = ['nodejs', 'yarn']
 cmds = ['yarn install --frozen-lockfile']
 
 [phases.build]
-cmds = ['yarn build']
+cmds = [
+  'yarn lint --fix',  # Run ESLint fix
+  'yarn build'        # Build the application
+]
 
 [start]
 cmd = 'node .next/standalone/server.js'

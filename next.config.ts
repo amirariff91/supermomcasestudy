@@ -15,15 +15,7 @@ const nextConfig: NextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: false,
-  },
-  experimental: {
-    turbo: {
-      rules: {
-        // Optimize Turbopack rules for static site
-        '*.css': ['style-loader', 'css-loader'],
-      },
-    },
-  },
+  }
 };
 
 export default nextConfig;
